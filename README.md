@@ -1,3 +1,4 @@
+#LetsEncryptのSSL更新をAliasコマンド叩いて実行できるようにする
 # ディレクトリとスクリプトの作成
 mkdir -p /home/asp_ssl_update/
 touch /home/asp_ssl_update/update_ssl.sh
