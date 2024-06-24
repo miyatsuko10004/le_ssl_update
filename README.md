@@ -1,11 +1,11 @@
 # LetsEncryptのSSL更新をAliasコマンド叩いて実行できるようにする
 # ディレクトリとスクリプトの作成
-mkdir -p /home/asp_ssl_update/<br>
-touch /home/asp_ssl_update/update_ssl.sh<br>
-chmod +x /home/asp_ssl_update/update_ssl.sh<br>
+mkdir -p /home/le_ssl_update/<br>
+touch /home/le_ssl_update/update_ssl.sh<br>
+chmod +x /home/le_ssl_update/update_ssl.sh<br>
 
 # スクリプトの内容を記述
-cat << 'EOF' > /home/asp_ssl_update/update_ssl.sh
+cat << 'EOF' > /home/le_ssl_update/update_ssl.sh
 #!/bin/bash
 
 # SSL証明書ディレクトリ名のリストを取得
@@ -21,7 +21,7 @@ done
 EOF
 
 # Aliasの作成
-echo "alias updatessl='/home/asp_ssl_update/update_ssl.sh'" >> ~/.bashrc
+echo "alias updatessl='/home/le_ssl_update/update_ssl.sh'" >> ~/.bashrc
 
 # .bashrcを再読み込み
 source ~/.bashrc
